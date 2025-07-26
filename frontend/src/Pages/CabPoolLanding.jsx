@@ -31,7 +31,7 @@ const CabPoolLanding = () => {
     
     try {
       // Simulate API call - replace with actual endpoint
-      const response = await fetch('https://cab-pool-ebon.vercel.app/api/register', {
+      const response = await fetch('https://cabpool.onrender.com/api/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ const CabPoolLanding = () => {
     
     try {
       // Simulate API call - replace with actual endpoint
-      const response = await fetch('https://cab-pool-ebon.vercel.app/api/feedback', {
+      const response = await fetch('https://cabpool.onrender.com/api/feedback', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
