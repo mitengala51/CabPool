@@ -45,13 +45,13 @@ app.get('/health', (req, res) => {
  */
 app.post('/api/register', async (req, res) => {
   try {
-    const { name, email, phone, message } = req.body;
+    const { name, email, phone, pickup_point, drop_point ,message } = req.body;
 
     // Validation
-    if (!name || !email) {
+    if (!name || !email || !phone || !pickup_point || !drop_point) {
       return res.status(400).json({
         success: false,
-        error: 'Name and email are required fields'
+        error: 'Please fill all the required fields'
       });
     }
 
@@ -86,6 +86,8 @@ app.post('/api/register', async (req, res) => {
           name: name.trim(),
           email: email.toLowerCase().trim(),
           phone: phone ? phone.trim() : null,
+          pickup_point: pickup_point? pickup_point.trim() : null,
+          drop_point: drop_point? drop_point.trim() : null,
           message: message ? message.trim() : null
         }
       ])
